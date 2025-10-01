@@ -38,13 +38,13 @@
     }
     a {
       text-decoration: none;
-      padding: 16px 24px; /* Increased size */
-      border-radius: 10px; /* Slightly more rounded */
+      padding: 16px 24px;
+      border-radius: 10px;
       color: white;
       font-weight: bold;
       display: inline-block;
       margin: 4px;
-      font-size: 18px; /* Bigger text */
+      font-size: 18px;
       transition: transform 0.2s, box-shadow 0.2s;
     }
     a:hover {
@@ -5686,6 +5686,8 @@
   const table = document.getElementById("contactsTable");
 
   for (let i = 0; i < contacts.length; i++) {
+    if (contacts[i].phone === "0") continue; // skip invalid numbers
+
     const row = table.insertRow();
     const srCell = row.insertCell(0);
     const callCell = row.insertCell(1);
@@ -5693,8 +5695,8 @@
 
     srCell.innerText = i + 1;
 
-    callCell.innerHTML = <a href="tel:${contacts[i].phone}" class="call">📞 Call</a>;
-    waCell.innerHTML = <a href="https://wa.me/91${contacts[i].phone}" target="_blank" class="whatsapp">💬 WhatsApp</a>;
+    callCell.innerHTML = `<a href="tel:${contacts[i].phone}" class="call">📞 Call</a>`;
+    waCell.innerHTML = `<a href="https://wa.me/91${contacts[i].phone}" target="_blank" class="whatsapp">💬 WhatsApp</a>`;
   }
 </script>
 
