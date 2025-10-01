@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    a {
+      text-decoration: none;
+      padding: 16px 24px; /* Increased size */
+      border-radius: 10px; /* Slightly more rounded */
+      color: white;
+      font-weight: bold;
+      display: inline-block;
+      margin: 4px;
+      font-size: 18px; /* Bigger text */
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    a:hover {
+      background: red;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .call {
+      background: #28a745;
+    }
+    .whatsapp {
+      background: #25D366;
+    }
+    @media (max-width: 480px) {
+      th, td {
+        padding: 10px;
+        font-size: 14px;
+      }
+      a {
+        padding: 12px 18px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h2>Contacts List</h2>
+
+<table id="contactsTable">
+  <tr>
+    <th>Sr. No</th>
+    <th>Call</th>
+    <th>WhatsApp</th>
+  </tr>
+</table>
+
+<script>
+  const contacts = [
+  {
+    "phone": "9828368942"
+  },
+  {
+    "phone": "9413949988"
+  },
+  {
+    "phone": "9602782618"
+  },
+  {
+    "phone": "9887072959"
+  },
+  {
+    "phone": "9414007957"
+  },
+  {
+    "phone": "9928070813"
+  },
+  {
+    "phone": "9829829532"
+  },
+  {
+    "phone": "9782008304"
+  },
+  {
+    "phone": "7737730000"
+  },
+  {
+    "phone": "0"
+  },
+  {
+    "phone": "0"
+  },
+  {
+    "phone": "9414948179"
+  },
+  {
+    "phone": "9983971816"
+  },
+  {
+    "phone": "6376077072"
+  },
+  {
+    "phone": "9166669929"
+  },
+  {
+    "phone": "7568160964"
+  },
+  {
+    "phone": "9413302914"
+  },
+  {
+    "phone": "9928528434"
+  },
+  {
+    "phone": "8290281411"
+  },
+  {
+    "phone": "9829072188"
+  },
+  {
+    "phone": "9694170796"
+  },
+  {
+    "phone": "9414009401"
+  },
+  {
+    "phone": "8290615337"
+  },
+  {
+    "phone": "9929714528"
+  },
+  {
+    "phone": "9829054019"
+  },
+  {
+    "phone": "8799710990"
+  },
+  {
+    "phone": "9694752754"
+  },
+  {
+    "phone": "9636207185"
+  },
+  {
+    "phone": "8769038320"
+  },
+  {
+    "phone": "6377389817"
+  },
+  {
+    "phone": "9414128671"
+  },
+  {
+    "phone": "9414155744"
+  },
+  {
+    "phone": "8690014129"
+  },
+  {
+    "phone": "9414010882"
+  },
+  {
+    "phone": "9602211155"
+  },
+  {
+    "phone": "9829302192"
+  },
+  {
+    "phone": "7891830009"
+  },
+  {
+    "phone": "9660613046"
+  },
+  {
+    "phone": "9928299817"
+  },
+  {
+    "phone": "982965420"
+  },
+  {
+    "phone": "9414010902"
+  },
+  {
+    "phone": "9636674709"
+  },
+  {
+    "phone": "9166486481"
+  },
+  {
+    "phone": "9829077332"
+  },
+  {
+    "phone": "9785514936"
+  },
+  {
+    "phone": "9460784100"
+  },
+  {
+    "phone": "9414419400"
+  },
+  {
+    "phone": "9414002300"
+  },
+  {
+    "phone": "7725956126"
+  },
+  {
+    "phone": "9352872777"
+  },
+  {
+    "phone": "9413948843"
+  },
+  {
+    "phone": "9414007821"
+  },
+  {
+    "phone": "9999068469"
+  },
+  {
+    "phone": "9414380280"
+  },
+  {
+    "phone": "8502963922"
+  },
+  {
+    "phone": "7742208421"
+  },
+  {
+    "phone": "9314213267"
+  },
+  {
+    "phone": "8000350911"
+  },
+  {
+    "phone": "9414380029"
+  },
+  {
+    "phone": "9636935981"
+  },
+  {
+    "phone": "9784143081"
+  },
+  {
+    "phone": "9414…
